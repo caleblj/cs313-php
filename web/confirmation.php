@@ -23,12 +23,12 @@ foreach ($foods as $food)
 }
 ?>	
 
-	These are being sent to the following address:<br />
+These are being sent to the following address:<br />
 		<p><?=$name ?></p>
 		<p><?=$address ?> <?=$apt ?></p>
 		<p><?=$city ?> <?=$state ?> <?=$zip ?></p>
 
 		<br />
-		Thank you for shopping with us!<br/>
+Thank you for shopping with us!<br/>
 </body>
 </html>

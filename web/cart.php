@@ -25,7 +25,7 @@ $comments = htmlspecialchars($_POST["comments"]);
 foreach ($foods as $food)
 {
 	$food_clean = htmlspecialchars($food);
-	echo "<li><p>$food_clean</p></li>";
+//	echo "<li><p>$food_clean</p></li>";
 }
 ?>		
 
@@ -36,6 +36,6 @@ foreach ($foods as $food)
 			<input type="submit" value="Checkout"><br />
 			If you want to shop more please click "Shop"<br />
 			<FORM><INPUT Type="button" VALUE="Shop" onClick="history.go(-1);return true;"></FORM>
-</form>
+	</form>
 </body>
 </html>
