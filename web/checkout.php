@@ -17,6 +17,9 @@ $comments = htmlspecialchars($_POST["comments"]);
 		<label for ="apt">Apartment number:</label>
 		<input type="text" placeholder="apt" id="apt" name="apt"><br />
 
+		<label for ="city">City:</label>
+		<input type="city" placeholder="City" id="city" name="city"><br />
+
 		<label for ="zip">Zip Code:</label>
 		<input type="text" placeholder="Zip" id="zip" name="zip"><br />
 
