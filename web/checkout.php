@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 $name = htmlspecialchars($_POST["name"]);
 $foods = $_POST["foods"];
 $comments = htmlspecialchars($_POST["comments"]);
@@ -11,6 +11,10 @@ $comments = htmlspecialchars($_POST["comments"]);
  <body>
  	<form method="POST" action="confirmation.php">
  	Please enter the following:<br/>
+
+		<label for ="name">Name</label>
+		<input type="text" placeholder="Name" id="name" name="name">
+
 		<label for ="address">Address:</label>
 		<input type="text" placeholder="Address" id="address" name="address"><br />
 
