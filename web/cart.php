@@ -15,7 +15,7 @@ $comments = htmlspecialchars($_POST["comments"]);
 	<title>Shopping Cart</title>
 </head>
 <body>
-	<form method="POST" action="Checkout.php">
+	<form method="POST" action="checkout.php">
 	<h1>viewing cart</h1>
 
 	<p>Your name is: <?=$name ?></p>
@@ -32,11 +32,10 @@ foreach ($foods as $food)
 	</ul>
 
 	<p>Comments: <?=$comments?></p>
-</form>
 		If the above is correct please select "Checkout"<br />
 			<input type="submit" value="Checkout"><br />
 			If you want to shop more please click "Shop"<br />
-			<button onclick="goBack()">Shop</button>
-
+			<FORM><INPUT Type="button" VALUE="Shop" onClick="history.go(-1);return true;"></FORM>
+</form>
 </body>
 </html>
