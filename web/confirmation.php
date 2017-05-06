@@ -17,7 +17,7 @@ $state = htmlspecialchars($_POST["state"]);
 Your order is being sent to the following address:<br />
 		<p><?=$name ?></p>
 		<p><?=$address ?> <?=$apt ?></p>
-		<p><?=$city ?> <?=$state ?> <?=$zip ?></p>
+		<p><?=$city ?>, <?=$state ?>, <?=$zip ?></p>
 
 		<br />
 Thank you for shopping with us!<br/>
