@@ -3,6 +3,7 @@ $name = htmlspecialchars($_POST["name"]);
 $address = htmlspecialchars($_POST["address"]);
 $zip = htmlspecialchars($_POST["zip"]);
 $apartment = htmlspecialchars($_POST["apt"]);
+$city = htmlspecialchars($_POST["city"]);
 $state = htmlspecialchars($_POST["state"]);
  ?>
 <!DOCTYPE html>
