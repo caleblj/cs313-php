@@ -1,5 +1,4 @@
 <?php 
-$name = htmlspecialchars($_POST["name"]);
 $foods = $_POST["foods"];
 $comments = htmlspecialchars($_POST["comments"]);
  ?>
@@ -13,7 +12,7 @@ $comments = htmlspecialchars($_POST["comments"]);
  	Please enter the following:<br/>
 
 		<label for ="name">Name</label>
-		<input type="text" placeholder="Name" id="name" name="name">
+		<input type="text" placeholder="Name" id="name" name="name"><br />
 
 		<label for ="address">Address:</label>
 		<input type="text" placeholder="Address" id="address" name="address"><br />

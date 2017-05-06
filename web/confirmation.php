@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 $name = htmlspecialchars($_POST["name"]);
 $address = htmlspecialchars($_POST["address"]);
 $zip = htmlspecialchars($_POST["zip"]);
