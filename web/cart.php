@@ -6,7 +6,7 @@
 // then in PHP we could process that value and determine the exact
 // presentation text to render.
 $name = htmlspecialchars($_POST["name"]);
-$food = $_POST["food"];
+$foods = $_POST["foods"];
 $comments = htmlspecialchars($_POST["comments"]);
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ foreach ($foods as $food)
 	<p>Comments: <?=$comments?></p>
 </form>
 		If the above is correct please select "Checkout"<br />
-			<input type="submit" value="Checkout">
+			<input type="submit" value="Checkout"><br />
 			If you want to shop more please click "Shop"<br />
 			<button onclick="goBack()">Shop</button>
 
