@@ -6,13 +6,13 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Card Names</title>
+	<title>Card Info</title>
 </head>
 
 <body>
 <div>
 
-<h1>Name of Cards</h1>
+<h1>Card Info</h1>
 
 <?php
 $statement = $db->prepare("SELECT name, setnum, setname, price FROM card");
