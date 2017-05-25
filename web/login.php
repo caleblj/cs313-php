@@ -18,9 +18,9 @@ if (count($result) == 0) {
         // password mismatch
         echo "Wrong Password!";
     } else {
-        // authorize
+        // authorized
         $_SESSION['userId'] = $result[0]['id'];
-        header('Location: /project.php');
+        header('Location: /project.html');
     }
 }
 }
