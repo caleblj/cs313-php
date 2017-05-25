@@ -1,6 +1,9 @@
 <?php 
 if(!empty($_POST))
 {
+	require('dbConnect.php');
+	$db = get_db();
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 $stmt = $db->prepare('SELECT * FROM "user" WHERE username = :username;');

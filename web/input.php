@@ -9,6 +9,7 @@
 
 
 <?php
+require('dbConnect.php');
 $statement = $db->prepare("INSERT INTO card (name, num, setname, value) VALUES (:name, :num, :setname, :value)");
 $statement->bindValue(':name', $name);
 $statement->bindValue(':num', $num);
