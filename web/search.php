@@ -5,14 +5,14 @@ $db = get_db();
 if(!empty($_POST))
 {
 $card = $_POST['name'];
-$statement = $db->prepare('SELECT * from card WHERE lower(name) LIKE :card');
+$statement = $db->prepare('SELECT card.name, card.value, collection.name AS collectname, card.setnum FROM card INNER JOIN collection ON card.collection_id=collection.id WHERE lower(card.name) LIKE :card');
 $statement->bindValue(':card', strtolower('%'.$card.'%'));
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	echo '<p>';
 	echo '<strong>' . $row['name'] . ' ' . $row['setnum'] . ':';
-	echo $row['setname'] . '</strong>' . ' - ' . $row['price'];
+	echo $row['collectname'] . '</strong>' . ' - ' . $row['value'];
 	echo '</p>';
 }
 }
