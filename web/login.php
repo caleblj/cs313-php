@@ -6,15 +6,17 @@ if(!empty($_POST))
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-$stmt = $db->prepare('SELECT * FROM "user" WHERE username = :username;');
+$stmt = $db->prepare('SELECT * FROM account WHERE username = :username;');
 $stmt->bindValue(':username', $username);
 $stmt->execute();
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 if (count($result) == 0) {
     // user don't exist
+    echo "User does not exist!";
 } else {
     if ($password != $result[0]['password']) {
         // password mismatch
+        echo "Wrong Password!";
     } else {
         // authorize
         $_SESSION['userId'] = $result[0]['id'];
