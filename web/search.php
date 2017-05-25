@@ -5,8 +5,8 @@ $db = get_db();
 if(!empty($_POST))
 {
 $card = $_POST['name'];
-$statement = $db->prepare('SELECT * from card WHERE lower(name) LIKE \'%:card%\'');
-$statement->bindValue(':card', strtolower($card));
+$statement = $db->prepare('SELECT * from card WHERE lower(name) LIKE :card');
+$statement->bindValue(':card', strtolower('%'.$card.'%'));
 $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
