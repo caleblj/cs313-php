@@ -10,6 +10,12 @@
 
 <?php
 require('dbConnect.php');
+$db = get_db();
+$name = $_POST['name'];
+$num = $_POST['num'];
+$setname = $_POST['setname'];
+$value = $_POST['value'];
+
 $statement = $db->prepare("INSERT INTO card (name, num, setname, value) VALUES (:name, :num, :setname, :value)");
 $statement->bindValue(':name', $name);
 $statement->bindValue(':num', $num);
