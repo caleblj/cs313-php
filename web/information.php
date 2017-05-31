@@ -1,8 +1,10 @@
 <?php
-
-require "dbConnect.php";
+require('dbConnect.php');
 $db = get_db();
+$statement = $db->prepare('SELECT card.name, card.value, collection.name AS collectname, card.setnum FROM card INNER JOIN collection ON card.collection_id=collection.id');
+$statement->execute();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,18 +17,18 @@ $db = get_db();
 <h1>Card Info</h1>
 
 <?php
-$statement = $db->prepare("SELECT name, setnum, setname, price FROM card");
-$statement->execute();
-// Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	echo '<p>';
-	echo '<strong>' . $row['name'] . ' ' . $row['setnum'] . ':';
-	echo $row['setname'] . '</strong>' . ' - ' . $row['price'];
+	echo '<strong>' . $row['name'] . ' ' . $row['setnum'] . ': ';
+	echo $row['collectname'] . '</strong>' . ' ' . $row['value'];
 	echo '</p>';
 }
 ?>
 
+
+
+  <a href="https://ancient-dusk-38108.herokuapp.com/project.html">Menue</a>
 
 </div>
 
