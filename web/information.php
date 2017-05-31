@@ -1,7 +1,7 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
-$statement = $db->prepare('SELECT card.name, card.value, collection.name AS collectname, card.setnum FROM card INNER JOIN collection ON card.collection_id=collection.id');
+$statement = $db->prepare('SELECT card.name, card.id, card.value, collection.name AS collectname, card.setnum FROM card INNER JOIN collection ON card.collection_id=collection.id');
 $statement->execute();
 ?>
 
@@ -23,6 +23,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo '<strong>' . $row['name'] . ' ' . $row['setnum'] . ': ';
 	echo $row['collectname'] . '</strong>' . ' ' . $row['value'];
 	echo '</p>';
+	echo '<a href = "names.php?id=' .$row['id]'] . '">Edit card</a>';
 }
 ?>
 
