@@ -33,7 +33,8 @@ $statement->execute();
 </form>
 <form action="/project.html" method="GET">
 
-  <button type="">Home</button>
+  <a href="https://ancient-dusk-38108.herokuapp.com/project.html">Menue</a>
+
 </form>
 
 
