@@ -54,7 +54,7 @@ foreach($collections AS $collection){
 }
 
   ?></SELECT><br>
-  Price of card: <input type="number" name="value" value = "<?php echo $card[0]['value']; ?>"><br>
+  Price of card: <input type="text" name="value" value = "<?php echo $card[0]['value']; ?>"><br>
   <input type="hidden" name = "id" value="<?php echo $_GET['id']; ?>">
 
   <button type="">Submit</button><br>
