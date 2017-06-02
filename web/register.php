@@ -16,9 +16,8 @@ $display = $_POST['display'];
 
 $statement = $db->prepare("INSERT INTO account (username, password, display) VALUES (:username, :password, :display)");
 $statement->bindValue(':name', $name);
-$statement->bindValue(':setnum', $setnum);
-$statement->bindValue(':collection_id', $collection_id);
-$statement->bindValue(':value', $value);
+$statement->bindValue(':password', $password);
+$statement->bindValue(':display', $display);
 $statement->execute();
 header('location:login.php');
 exit();
