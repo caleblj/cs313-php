@@ -13,13 +13,13 @@ require('dbConnect.php');
 $db = get_db();
 if (!empty($_POST)){
 $name = $_POST['name'];
-$num = $_POST['num'];
+$setnum = $_POST['setnum'];
 $collection_id = $_POST['collection_id'];
 $value = $_POST['value'];
 
-$statement = $db->prepare("INSERT INTO card (name, num, collection_id, value) VALUES (:name, :num, :collection_id, :value)");
+$statement = $db->prepare("INSERT INTO card (name, setnum, collection_id, value) VALUES (:name, :setnum, :collection_id, :value)");
 $statement->bindValue(':name', $name);
-$statement->bindValue(':num', $num);
+$statement->bindValue(':setnum', $setnum);
 $statement->bindValue(':collection_id', $collection_id);
 $statement->bindValue(':value', $value);
 $statement->execute();
