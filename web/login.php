@@ -39,7 +39,7 @@ if (count($result) == 0) {
   Password: <input type="text" name="password"><br>
   <button type="">Submit</button>
 </form>
-
+<a href="register.php">Register new account</a>
 
 
 </body>
