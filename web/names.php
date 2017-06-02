@@ -24,9 +24,8 @@ $statement = $db->prepare("UPDATE card SET name = :name, setnum = :setnum, colle
 $statement->bindValue(':name', $name);
 $statement->bindValue(':setnum', $setnum);
 $statement->bindValue(':collection_id', $collection_id);
-$statement->bindValue(':value', $value);
+$statement->bindValue(':value', $value, PDO::PARAM_FLOAT);
 $statement->bindValue(':id', $id);
-
 $statement->execute();
 }
   if (!isset($_GET['id'])){
