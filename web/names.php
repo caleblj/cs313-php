@@ -10,16 +10,16 @@ require('dbConnect.php');
 $db = get_db();
 if (!empty($_POST)){
 $name = $_POST['name'];
-$num = $_POST['num'];
+$num = $_POST['setnum'];
 $collection_id = $_POST['collection_id'];
 $value = $_POST['value'];
 $value = $_POST['id'];
 
 
 
-$statement = $db->prepare("UPDATE card SET name = :name, num = :num, collection_id = :collection_id, value = :value WHERE id = :id ");
+$statement = $db->prepare("UPDATE card SET name = :name, setnum = :setnum, collection_id = :collection_id, value = :value WHERE id = :id ");
 $statement->bindValue(':name', $name);
-$statement->bindValue(':num', $num);
+$statement->bindValue(':setnum', $setnum);
 $statement->bindValue(':collection_id', $collection_id);
 $statement->bindValue(':value', $value);
 $statement->bindValue(':id', $id);
@@ -42,7 +42,7 @@ $statement->execute();
 ?>
 <form action="/names.php" method="POST">
   Card Name: <input type="text" name="name" value = "<?php echo $card[0]['name']; ?>"><br>
-  Collection Number: <input type="number" name="setnum" value = "<?php echo $card[0]['num']; ?>"><br>
+  Collection Number: <input type="number" name="setnum" value = "<?php echo $card[0]['setnum']; ?>"><br>
   Set Name: <input type="text" name="collection_id" value = "<?php echo $card[0]['collection_id']; ?>"><br>
   Price of card: <input type="number" name="value" value = "<?php echo $card[0]['value']; ?>"><br>
   <input type="hidden" name = "id" value="<?php echo $_GET['id']; ?>">
