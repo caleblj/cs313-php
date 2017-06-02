@@ -40,7 +40,7 @@ $statement->execute();
   		$statement->bindValue(':id', $_GET['id']);
 	$statement->execute();
 	$card = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+	var_dump($card);
 
 ?>
 <form action="/names.php?id=<?php echo $card[0]['id']; ?>"" method="POST">
