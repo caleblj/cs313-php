@@ -36,7 +36,7 @@ if (count($result) == 0) {
 
 <form action="/login.php" method="POST">
   Username: <input type="text" name="username"><br>
-  Password: <input type="text" name="password"><br>
+  Password: <input type="password" name="password"><br>
   <button type="">Submit</button>
 </form>
 <a href="register.php">Register new account</a>
