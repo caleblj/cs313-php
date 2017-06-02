@@ -23,7 +23,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	echo '<strong>' . $row['name'] . ' ' . $row['setnum'] . ': ';
 	echo $row['collectname'] . '</strong>' . ' ' . $row['value'];
 	echo '</p>';
-	echo '<a href = "names.php?id=' .$row['id]'] . '">Edit card</a>';
+	echo '<a href = "names.php?id=' .$row['id'] . '">Edit card</a>';
 }
 ?>
 
