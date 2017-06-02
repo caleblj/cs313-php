@@ -1,7 +1,7 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
-$statement = $db->prepare('SELECT card.name, card.id, card.value, collection.name AS collectname, card.setnum FROM card INNER JOIN collection ON card.collection_id=collection.id');
+$statement = $db->prepare('SELECT card.name, card.id AS id, card.value, collection.name AS collectname, card.setnum FROM card INNER JOIN collection ON card.collection_id=collection.id');
 $statement->execute();
 ?>
 
