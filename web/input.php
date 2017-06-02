@@ -11,6 +11,9 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
+$statement = $db->prepare("SELECT * from collection");
+$statement->execute();
+$collections = $statement->fetchAll(PDO::FETCH_ASSOC);
 if (!empty($_POST)){
 $name = $_POST['name'];
 $setnum = $_POST['setnum'];
@@ -31,11 +34,21 @@ exit();
 <form action="/input.php" method="POST">
   Card Name: <input type="text" name="name"><br>
   Collection Number: <input type="number" name="setnum"><br>
-  Set Name: <input type="text" name="collection_id"><br>
+  Set Name: <SELECT name="collection_id">
+  <?php
+foreach($collections AS $collection){
+	echo '<option value="'.$collection['id'].
+	'">'.$collection['name']. '</option>';
+}
+
+  ?></SELECT><br>
   Price of card: <input type="number" name="value"><br>
 
   <button type="">Submit</button> <br>
 </form>
+
+
+
 <form action="/project.html" method="GET">
 
   <a href="https://ancient-dusk-38108.herokuapp.com/project.html">Menue</a>
