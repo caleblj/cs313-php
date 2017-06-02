@@ -47,7 +47,7 @@ $statement->execute();
   Price of card: <input type="number" name="value" value = "<?php echo $card[0]['value']; ?>"><br>
   <input type="hidden" name = "id" value="<?php echo $_GET['id']; ?>">
 
-  <button type="">Submit</button>
+  <button type="">Submit</button><br>
 </form>
 
 <?php 

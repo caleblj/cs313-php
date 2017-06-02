@@ -28,7 +28,8 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 
 <form action="/search.php" method="POST">
   Search: <input type="text" name="name"><br>
-  <button type="">Submit</button>
+  <button type="">Submit</button><br>
+  <a href="https://ancient-dusk-38108.herokuapp.com/project.html">Menue</a>
 </form>
 
 </body>

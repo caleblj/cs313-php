@@ -11,6 +11,7 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
+if (!empty($_POST)){
 $name = $_POST['name'];
 $num = $_POST['num'];
 $collection_id = $_POST['collection_id'];
@@ -22,6 +23,8 @@ $statement->bindValue(':num', $num);
 $statement->bindValue(':collection_id', $collection_id);
 $statement->bindValue(':value', $value);
 $statement->execute();
+}
+
 ?>
 <form action="/input.php" method="POST">
   Card Name: <input type="text" name="name"><br>
@@ -29,7 +32,7 @@ $statement->execute();
   Set Name: <input type="text" name="collection_id"><br>
   Price of card: <input type="number" name="value"><br>
 
-  <button type="">Submit</button>
+  <button type="">Submit</button> <br>
 </form>
 <form action="/project.html" method="GET">
 
