@@ -10,7 +10,7 @@ require('dbConnect.php');
 $db = get_db();
 if (!empty($_POST)){
 $name = $_POST['name'];
-$num = $_POST['setnum'];
+$setnum = $_POST['setnum'];
 $collection_id = $_POST['collection_id'];
 $value = $_POST['value'];
 $value = $_POST['id'];
