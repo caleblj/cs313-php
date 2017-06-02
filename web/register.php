@@ -15,7 +15,7 @@ $password = $_POST['password'];
 $display = $_POST['display'];
 
 $statement = $db->prepare("INSERT INTO account (username, password, display) VALUES (:username, :password, :display)");
-$statement->bindValue(':name', $name);
+$statement->bindValue(':username', $username);
 $statement->bindValue(':password', $password);
 $statement->bindValue(':display', $display);
 $statement->execute();
